@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block title %} Numeros Aleatorios {% endblock %}
+{% block content %}
+<br>
+<div class="row">
+  <div class="col-sm-12 text-center">
+    <h3 style="font-family:monospace;">Capitulo 3: Numeros Aleatorios</h3>
+  </div>
+</div>
+<hr>
+<br>
+<div class="card-group">
+  <div class="card cards">
+    <img src="{{ url_for('static', filename='cuadradosmedios.jpg') }}" class="card-img-top" alt="Cuadrados Medios">
+    <div class="card-body" align="justify">
+      <h5 class="card-title">Método de Cuadrados Medios</h5>
+      <p class="card-text">Es una técnica numérica para conducir
+        experimentos con relaciones matemáticas y lógicas, las cuales son necesarias para describir el comportamiento y
+        la estructura de sistemas complejos del mundo real a través de largos periodos de tiempo. Esto para obtener una
+        sucesión de números que básicamente se obtienen a partir de recurrencia, los cuales son relevantes en los
+        procesos de simulación debido a que con estos números se hace posible comprobar el correcto funcionamiento de
+        una prueba. </p>
+        <center>
+          <button class="boton" OnClick="location.href='/cuadradosMedios'" type="button"><i class="bi bi-card-checklist"></i>  Mostrar </button>
+        </center>
+    </div>
+  </div>
+  <div class="card cards">
+    <img src="{{ url_for('static', filename='congruencialineal.jpg') }}" class="card-img-top" alt="Congruencia lineal">
+    <div class="card-body" align="justify">
+      <h5 class="card-title">Método de Congruencia Lineal</h5>
+      <p class="card-text">Una ecuación de congruencia es una congruencia entre expresiones literales, los valores que
+        la satisfacen son sus soluciones. Por ejemplo 13x ≡ 5 (mod 77) es una ecuación de congruencia.
+        Para poder encontrar la solución de una congruencia lineal en primer lugar hay que saber hallar el inverso de a
+        (mod m) Este inverso, a’, es un número tal que a’*a ≡ 1 (mod m). La condición necesaria y suficiente para que
+        dos números a y b sean congruentes respecto al módulo m es que su diferencia sea un múltiplo de m, es decir, m |
+        (a -b)</p>
+        <center>
+          <button class="boton" OnClick="location.href='/congruenciaLineal'" type="button"> <i class="bi bi-card-checklist"></i>  Mostrar </button>
+        </center>
+    </div>
+  </div>
+  <div class="card cards">
+    <img src="{{ url_for('static', filename='congruencialmultiplicativo.jpeg') }}" class="card-img-top"
+      alt="Congruencia multiplicativo">
+    <div class="card-body" align="justify">
+      <h5 class="card-title">Método de Congruencia Multiplicativo</h5>
+      <p class="card-text">Un algoritmo que se utiliza para generar números pseudo aleatorios, es el algoritmo
+        congruencia multiplicativo. Tiene como base al algoritmo congruencia lineal pero conlleva una operación menos.
+        Es decir, se toma una semilla a la que llamaremos X_{0}X. Se multiplica por un número a y al resultado de la
+        multiplicación se divide por m recuperando solo el residuo o módulo de la división. Este valor será X1, y así
+        sucesivamente mejorando la eficiencia</p>
+        <center>
+          <button class="boton" OnClick="location.href='/congruencialMultiplicativo'" type="button"> <i class="bi bi-card-checklist"></i>  Mostrar </button>
+        </center>
+    </div>
+  </div>
+  <div class="card cards">
+    <img src="{{ url_for('static', filename='poisson.jpg') }}" class="card-img-top" >
+    <div class="card-body" align="justify">
+    <h5 class="card-title">Distribuccion de Poisson </h5>
+    <p class="card-text">Esta distribución es una de las más importantes distribuciones de variable discreta. Sus
+      principales aplicaciones hacen referencia a la modelización de situaciones en las que nos interesa determinar el
+      número de hechos de cierto tipo que se pueden producir en un intervalo de tiempo o de espacio, bajo presupuestos
+      de aleatoriedad y ciertas circunstancias restrictivas. Otro de sus usos frecuentes es la consideración límite de
+      procesos dicotómicos reiterados un gran número de veces si la probabilidad es muy pequeña.
+    </p>
+    <center>
+      <button class="boton" OnClick="location.href='/distribucionPoisson'" type="button"><i class="bi bi-card-checklist"></i>  Mostrar </button>
+    </center>
+  </div>
+</div>
+</div>
+
+{% endblock %}

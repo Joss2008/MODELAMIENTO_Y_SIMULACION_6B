@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %} Inicio {% endblock %}
+{% block content %}
+<br>
+<div class="container" >
+    <div class="card border-primary mb-3" >
+    <nav class="navbar navbar-expand-lg  navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="nav-link" href="/">
+                <img src="{{ url_for('static', filename='uleam.png') }}" style="width: 250px; height:80px"
+                    class="card-img-top" alt="Grafica por fecha">
+            </a>
+            <center>
+                <a class="nav-link" href="#">Universidad Laica ELoy Alfaro de Manabi <br>
+                    Facultad de Ciencias Informaticas <br>
+                    Carrera Tecnologia de la Informacion</a>
+            </center>
+
+            <a class="nav-link" href="/">
+                <img src="{{ url_for('static', filename='facci.jpg') }}" style="width: 250px; height:80px"
+                    class="card-img-top" alt="Grafica por fecha">
+            </a>
+
+        </div>
+    </nav>
+    <br><br>
+    <center><br>
+        <h6> <strong>Tema:</strong> <br> Criptomonedas Bitcoin</h6><br>
+        <h6> <strong>Nombre:</strong> <br> Macias Pico Josselyn Stefany</h6><br>
+        <h6> <strong>Curso:</strong> <br> Sexto "B"</h6> <br>
+        <h6> <strong>Materia:</strong> <br> Modelamiento y Simulacion</h6> <br>
+        <h6> <strong>Docente:</strong> <br> Ing. Jorge Moya Delgado</h6><br><br>
+
+    </center>
+    </div>
+    
+</div>
+
+{% endblock %}
