@@ -1,0 +1,57 @@
+.navbar {
+    background: linear-gradient(90deg, rgb(17, 66, 105),rgb(72, 83, 184), rgb(96, 166, 223));
+ }
+.nav-link{
+    color:rgb(255, 255, 255) !important;
+}
+.footer {
+    bottom: 0;
+    width: 1260px;
+    height: 100px;
+    background-color: #f5f5f5;
+}
+
+.cards{
+    background: linear-gradient(90deg, rgb(165, 200, 229),rgb(192, 195, 226), rgb(219, 229, 236));
+
+}
+
+.boton{
+    background: linear-gradient(90deg, rgb(116, 177, 228),rgb(60, 70, 182));
+}
+.boton1{
+    background: linear-gradient(90deg, rgb(60, 70, 182), rgb(116, 177, 228));
+}
+
+table {     
+    font-family: "Lucida Sans Unicode", "Lucida Grande", 
+    Sans-Serif;
+    font-size: 15px;      
+    text-align: left;    
+    border-collapse: collapse; 
+}
+
+th {     
+    font-size: 14px;     
+    font-weight: normal;         
+    background: #283c80;
+    border-top: 4px solid #5b6eb4;    
+    border-bottom: 1px solid #fff; 
+    color: #039; 
+}
+
+td {        
+    background: #e8edff;    
+    border-bottom: 1px solid #fff;
+    color: #669;    
+    border-top: 1px solid transparent; }
+
+tr:hover td { 
+    background: #d0dafd; 
+    color: #339; 
+}
+
+label{
+    color: black;
+    font-size: 20px;
+}

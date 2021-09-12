@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %} Montecarlo {% endblock %}
+{% block content %}
+<center>
+    <br>
+    <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        <strong>Resultados</strong>
+    </h2>
+    <br>
+</center>
+<div class="card mb-3">
+    {{data|safe}}
+</div>
+<div class="container col-md-6 mb-3">
+    <p class="">El total de ventas es <strong>{{data3|safe}}</strong> </p>
+</div>
+<div class="card mb-3">
+    {{data2|safe}}
+</div>
+<div class="card text-dark bg-light mb-3">
+    <center>
+      <div class="card-header"><strong>Grafica de Montecarlo</strong>
+    </center>
+    <img src="data:image/png;base64,{{image}}" class="img-fluid rounded-start" alt="grafica">
+
+  </div>
+
+{% endblock %}

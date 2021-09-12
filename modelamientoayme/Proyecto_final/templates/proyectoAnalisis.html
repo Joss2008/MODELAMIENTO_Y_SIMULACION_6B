@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %} Análisis {% endblock %}
+{% block content %}
+<center>
+  <br>
+  <h2 style="font-family:Verdana, Geneva, Tahoma, sans-serif;"><strong>Analisis de los datos de Dengue en
+      America</strong>
+  </h2>
+  <hr>
+  <br>
+</center>
+<div class="card text-dark bg-light mb-3">
+  <center>
+    <div class="card-header"><strong>Casos de Dengue de acuerdo al lugar correspondiente</strong></div>
+  </center>
+  <img src="data:image/png;base64,{{imagen1}}" class="img-fluid rounded-start" alt="grafica">
+  <div class="card-body">
+    <p class="card-text">En la gráfica se muestra un análisis realizado de los casos de Dengue en las Américas que se
+      han reportado en los últimos años, siendo el país de Brasil con una mayor cantidad de casos en comparación con el
+      resto de países.</p>
+  </div>
+</div>
+<div class="card text-dark bg-light mb-3">
+  <center>
+    <div class="card-header"><strong>Frecuencia de los casos de Dengue de acuerdo al lugar correspondiente</strong>
+    </div>
+  </center>
+  <img src="data:image/png;base64,{{imagen2}}" class="img-fluid rounded-start" alt="grafica">
+  <div class="card-body">
+    <p class="card-text">En la gráfica se muestra un análisis de la frecuencia que existe entre los 12 países que se
+      muestran, esto en relación a los casos de Dengue que se han reportado en cada uno de estos países, siendo Bolivia,
+      y El Salvador los países con un mayor número de frecuencia. </p>
+  </div>
+</div>
+<div class="card text-dark bg-light mb-3">
+  <center>
+    <div class="card-header"><strong>Top de los 8 lugares en America con mas dengue</strong></div>
+  </center>
+  <img src="data:image/png;base64,{{imagen3}}" class="img-fluid rounded-start" alt="grafica">
+  <div class="card-body">
+    <p class="card-text">El gráfico nos muestra un estadístico sobre los datos de los países con mayor caso de Dengue en
+      las Américas, por lo cual se los ha clasificado como el "Top 8 de los lugares en América con más dengue" </p>
+  </div>
+</div>
+
+{% endblock %}

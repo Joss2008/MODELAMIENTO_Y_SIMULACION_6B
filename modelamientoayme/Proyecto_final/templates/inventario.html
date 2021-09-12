@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %} inventario {% endblock %}
+{% block content %}
+<center>
+    <br>
+    <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        <strong>Resultados</strong>
+    </h2>
+    <br>
+</center>
+<div class="card mb-3">
+    <table class="table table-striped table-hover mt-2">
+        <thead>
+            {% for i in df.columns %}
+            <th>{{ i }}</th>
+            {% endfor %}
+        </thead>
+        <tbody>
+            {% for i in df.iterrows() %}
+            <tr>
+                <td>{{ i[1][0] }}</td>
+                <td>{{ i[1][1] }}</td>
+                <td>{{ i[1][2] }}</td>
+                <td>{{ i[1][3] }}</td>
+                <td>{{ i[1][4] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="card text-dark bg-light mb-3">
+    <center>
+      <div class="card-header"><strong>Grafica de Inventario</strong>
+      </div>
+    </center>
+    <img src="data:image/png;base64,{{imagen}}" class="img-fluid rounded-start" alt="grafica">
+    <div class="card-body">
+        <p class="card-text">Q = {{datos['Q']}}</p>
+        <p class="card-text">CoT = {{datos['CoT']}}</p>
+        <p class="card-text">ChT = {{datos['ChT']}}</p>
+        <p class="card-text">MO(O) = {{datos['MOQ']}}</p>
+        <p class="card-text">CTT = {{datos['CTT']}}</p>
+        <p class="card-text">P = {{datos['N']}}</p>
+        <p class="card-text">R= {{datos['R']}}</p>
+        <p class="card-text">T= {{datos['T']}}</p>
+    </div>
+  </div>
+
+{% endblock %}

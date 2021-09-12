@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+{% block content %}
+
+<center>
+    <br>
+    <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        Casos de dengue en las Americas</h1>
+    <hr>
+    <div class="card mb-3">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ url_for('static', filename='sistema.jpg') }}" style="width: 1260px; height:450px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
+
+
+
+{% endblock %}

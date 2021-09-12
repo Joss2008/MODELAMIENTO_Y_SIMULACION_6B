@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block title %} Regresión lineal {% endblock %}
+{% block content %}
+<div id="app">
+    {% if imagen %}
+    <center>
+        <br>
+        <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            <strong>Resultados</strong>
+        </h2>
+        <br>
+    </center>
+    <div class="card text-white">
+        <img src="data:image/png;base64,{{imagen}}" class="img-fluid rounded-start" alt="grafica">
+        <div class="card-img-overlay">
+            <h5 class="card-title">Grafica de Regresion Lineal</h5>
+        </div>
+    </div>
+
+    {% else %}
+    {% if error %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endif %}
+    <center>
+        <br><br><br>
+        <div class="card cards text-white bg-info mb-3" style="max-width: 60rem;">
+            <div class="card-header" style="font-size: 40px;">Regresion Lineal</div>
+            <div class="card-body">
+                <form action="/regresionLineal" method="post">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Eje X" name="xlbl" v-model='xlbl'>
+                    </div>
+                    <div class="mb-3"> 
+                        <textarea name="x" rows="3" class="form-control"
+                            placeholder="Datos" v-model="x"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Eje Y" name="ylbl" v-model="ylbl">
+                    </div>
+                    <div class="mb-3">
+                        <textarea name="y" rows="3" class="form-control"
+                            placeholder="Datos" v-model="y"></textarea>
+                    </div>
+                    <center>
+                        <button class="btn btn-secondary boton1" style="width: 300px;"
+                            @click="llenarCampos()">Resultados de
+                            Casos</button>
+                        <button type="submit" class="btn boton btn-secondary" style="width: 300px;">Calcular</button>
+                    </center>
+                </form>
+            </div>
+        </div><br><br><br>
+    </center>
+    {% endif %}
+</div>
+<script>
+    const app = {
+        data() {
+            return {
+                xlbl: null,
+                x: null,
+                ylbl: null,
+                y: null
+            }
+        },
+        methods: {
+            llenarCampos() {
+                this.xlbl = 'Años';
+                this.ylbl = 'Total';
+                this.x = '2008,2009,2010,2011,2012';
+                this.y = ('1501.0, 3432.7, 6418.3, 2037.00, 10449.50')
+
+            }
+        }
+    }
+    Vue.createApp(app).mount("#app")
+</script>
+{% endblock %}

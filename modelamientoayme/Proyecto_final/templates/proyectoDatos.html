@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %} Datos {% endblock %}
+{% block content %}
+<center>
+    <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        Casos de dengue en las Americas</h1>
+</center>
+<div class="card mb-3">
+    <table class="table table-striped table-hover mt-2">
+        <thead style="color: rgb(17, 36, 71);">
+            {% for i in data.columns %}
+            <th>{{ i }}</th>
+            {% endfor %}
+        </thead>
+        <tbody>
+            {% for i in data.iterrows() %}
+            <tr>
+                <td>{{ i[1][0] }}</td>
+                <td>{{ i[1][1] }}</td>
+                <td>{{ i[1][2] }}</td>
+                <td>{{ i[1][3] }}</td>
+                <td>{{ i[1][4] }}</td>
+                <td>{{ i[1][5] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+  </div>
+
+{% endblock %}
